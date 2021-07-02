@@ -1,114 +1,139 @@
 import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, TextInput, StyleSheet, TouchableHighlight, ScrollView, FlatList } from 'react-native'
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, TouchableHighlight, ScrollView, FlatList, Image } from 'react-native'
 import SelectMultiple from 'react-native-select-multiple'
+import DeviceInfo from 'react-native-device-info';
 
 interface AppState {
   selectedName: any;
 }
 
-const name = ['Blerion', 'Ramadan', 'Kristian', 'Klevis', 'Tito', "Mile", "Joni", "Sindi", "Ejada", "Oli", "Emi", "Kosta"];
+const name = ['Blerion', 'Ramadan', 'Kristian', 'Klevis', 'Tito', "Mile", "Joni", "Sindi", "Ejada", "Visi", "Emi", "Kosta", "Oli", "Erisa", "Ersa", "Iridion", "Miki", "Turi", "Bilishti"];
 
-// const OfferContent = (props: any) => (
-//   <TouchableOpacity activeOpacity={0.75} onPress={() => props.onClick(props.data )}>
-//       <View style={styles.singleOffer}>
-//           <View style={styles.itemData}>
-//               <Text style={styles.offername}>{props.data}</Text>
-//           </View>
-//       </View>
-//   </TouchableOpacity>
-// );
+const OfferContent = (props: any) => (
+  <View style={styles.emrat}>
+    <View style={styles.emriVecanti}>
+      <Text style={styles.emri}>{props.data}</Text>
+    </View>
+  </View>
+);
 
-// const ekipi = (ekipi: any) => {
-//   {ekipi.map((item: any, key: any) => 
-//     {
-//         return(
-//         <View>
-//           <Text> {item} </Text>
-//         </View>
-//       )
-//   })}
-// }
-
-class App extends React.Component<any, AppState>  {
-
+class App extends React.Component<any, AppState> {
   teams1: any;
   teams2: any;
 
   constructor(props: any) {
     super(props);
     this.state = {
-      selectedName: []
+      selectedName: [],
     };
 
-    this.selectedTeams = this.selectedTeams.bind(this)
+    this.selectedTeams = this.selectedTeams.bind(this);
     this.teams1 = [];
     this.teams2 = [];
-
   }
-  // const ekipi = (ekipi: any) => {
-  //   {ekipi.map((item: any, key: any) => 
-  //     {
-  //         return(
-  //         <View>
-  //           <Text> {item} </Text>
-  //         </View>
-  //       )
-  //   })}
-  // }
-  
 
   onSelectionsChange = (selectedName: any) => {
-    // selectedFruits is array of { label, value }
-    this.setState({ selectedName })
-  }
+    this.setState({selectedName});
+  };
+
+  renderLabel = (label: any, style: any) => {
+    return (
+      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+        <View style={{marginLeft: 5}}>
+          <Text style={{fontSize: 20, color: '#304249'}}>{label}</Text>
+        </View>
+      </View>
+    );
+  };
 
   selectedTeams() {
-
+    this.setState({selectedName: this.state.selectedName});
     this.state.selectedName.sort(() => Math.random() - 0.5);
+    let ekipet = this.state.selectedName;
+    console.log('EKIPETTTT', ekipet);
 
-    this.teams1 = this.state.selectedName.slice(0, 6);
-    this.teams2 = this.state.selectedName.slice(6, 13)
-    console.log("team1", this.teams1)
-    console.log("team2", this.teams2);
+    let teams: any = [];
+
+    {
+      ekipet.map((item: any, key: any) => {
+        teams.push(item.label);
+      });
+    }
+
+    this.teams1 = teams.slice(0, 6);
+    this.teams2 = teams.slice(6, 13);
+    console.log('team1', this.teams1);
+    console.log('team2', this.teams2);
   }
 
   render() {
     return (
       <ScrollView>
-        <Text style={{ margin: 30, fontSize: 20 }}>Perzgjidh lojtaret</Text>
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Text
+            style={{
+              margin: 30,
+              marginBottom: 10,
+              fontSize: 27,
+              color: '#293D39',
+              marginTop:
+                DeviceInfo.getModel() === 'iPhone 12' ||
+                DeviceInfo.getModel() === 'iPhone 12 Pro' ||
+                DeviceInfo.getModel() === 'iPhone 12 Pro Max'
+                  ? 50
+                  : 10,
+            }}>
+            Perzgjidh lojtaret
+          </Text>
+        </View>
         <ScrollView>
           <SelectMultiple
-            style={{height: 300}}
+            style={{marginTop: 10, height: 330}}
             items={name}
+            renderLabel={this.renderLabel}
             selectedItems={this.state.selectedName}
-            onSelectionsChange={this.onSelectionsChange} />
-          </ScrollView>
+            onSelectionsChange={this.onSelectionsChange}
+          />
+        </ScrollView>
         <View style={styles.btnActions}>
-            <TouchableHighlight
-              style={styles.payBtn}
-              onPress={this.selectedTeams}
-              activeOpacity={0.7}
-              underlayColor={"blue"}>
-              <Text style={styles.payBtnText}>Perzgjidh</Text>
-            </TouchableHighlight>
+          <TouchableHighlight
+            style={styles.payBtn}
+            onPress={this.selectedTeams}
+            activeOpacity={0.7}
+            underlayColor={'#738C88'}>
+            <Text style={styles.payBtnText}>Perzgjidh</Text>
+          </TouchableHighlight>
         </View>
-        <View>
-          {/* <FlatList
-                        data={this.state.teams1}
-                        renderItem={({ item }) => <OfferContent data={item}/>}
-                        keyExtractor={(item: any, index: any) => index.toString()}
-                        extraData={this.state}
-                        /> */}
-          {/* <this.ekipi> */}
-          {this.teams1.map((member: any) => {
-                <View>
-                  <Text> {member.label} </Text>
-                </View>
-              
-          })}
+        <View style={styles.gridRow}>
+          <View style={styles.gridCol}>
+            <Text style={{marginBottom: 10, color: '#AA4D4B', fontSize: 20}}>
+              EKIPI 1:
+            </Text>
+            <FlatList
+              data={this.teams1}
+              renderItem={({item}) => <OfferContent data={item} />}
+              keyExtractor={(item: any, index: any) => index.toString()}
+              extraData={this.state}
+            />
+          </View>
+          <View style={styles.gridCol}>
+            <Text style={{marginBottom: 10, color: '#4F997A', fontSize: 20}}>
+              EKIPI 2:
+            </Text>
+            <FlatList
+              data={this.teams2}
+              renderItem={({item}) => <OfferContent data={item} />}
+              keyExtractor={(item: any, index: any) => index.toString()}
+              extraData={this.state}
+            />
+          </View>
         </View>
       </ScrollView>
-    )
+    );
   }
 }
 export default App
@@ -118,22 +143,53 @@ const styles: any = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     fontSize: 24,
-    color: '#2754ba'
+    color: '#2754ba',
   },
   btnActions: {
+    marginTop: 35,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
   },
   payBtn: {
-    backgroundColor: "blue",
+    backgroundColor: '#738C88',
     paddingHorizontal: 20,
     paddingVertical: 5,
     borderRadius: 10,
-    marginTop: 5,
+    marginTop: 0,
   },
   payBtnText: {
     color: '#fff',
     fontSize: 17,
+  },
+  gridRow: {
+    flexDirection: 'row',
+    margin: 50,
+    marginTop: 20,
+    marginBottom: 0,
+    borderWidth: 1.5,
+    borderColor: '#738C88',
+    borderRadius: 10,
+  },
+  gridCol: {
+    margin: '12%',
+    marginTop: '7%',
+    marginBottom: '7%',
+    flexDirection: 'column',
+  },
+  ekipet: {
+    marginBottom: 10,
+  },
+  emrat: {
+    borderColor: '#72bcd4',
+    borderWidth: 1.5,
+    padding: 1,
+    marginBottom: 5,
+  },
+  emri: {
+    fontSize: 20,
+  },
+  emriVecanti: {
+    margin: 5,
   },
 });
