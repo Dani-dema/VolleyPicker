@@ -1,103 +1,139 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
+import React, { Component } from 'react'
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, TouchableHighlight, ScrollView, FlatList } from 'react-native'
+import SelectMultiple from 'react-native-select-multiple'
 
- import React from 'react';
- import { SafeAreaView,
-   ScrollView,
-   StatusBar,
-   StyleSheet,
-   Text,
-   useColorScheme,
-   View,
- } from 'react-native';
+interface AppState {
+  selectedName: any;
+}
 
- import {
-   Colors,
-   DebugInstructions,
-   Header,
-   LearnMoreLinks,
-   ReloadInstructions,
- } from 'react-native/Libraries/NewAppScreen';
+const name = ['Blerion', 'Ramadan', 'Kristian', 'Klevis', 'Tito', "Mile", "Joni", "Sindi", "Ejada", "Oli", "Emi", "Kosta"];
 
- const Section: React.FC<{
-   title: string;
- }> = ({children, title}) => {
-   const isDarkMode = useColorScheme() === 'dark';
-   return (
-     <View style={styles.sectionContainer}>
-       <Text
-         style={[
-           styles.sectionTitle,
-           {
-             color: isDarkMode ? Colors.white : Colors.black,
-           },
-         ]}>
-         {title}
-       </Text>
-       <Text
-         style={[
-           styles.sectionDescription,
-           {
-             color: isDarkMode ? Colors.light : Colors.dark,
-           },
-         ]}>
-         {children}
-       </Text>
-     </View>
-   );
- };
+// const OfferContent = (props: any) => (
+//   <TouchableOpacity activeOpacity={0.75} onPress={() => props.onClick(props.data )}>
+//       <View style={styles.singleOffer}>
+//           <View style={styles.itemData}>
+//               <Text style={styles.offername}>{props.data}</Text>
+//           </View>
+//       </View>
+//   </TouchableOpacity>
+// );
 
- const App = () => {
-   const isDarkMode = useColorScheme() === 'dark';
+// const ekipi = (ekipi: any) => {
+//   {ekipi.map((item: any, key: any) => 
+//     {
+//         return(
+//         <View>
+//           <Text> {item} </Text>
+//         </View>
+//       )
+//   })}
+// }
 
-   const backgroundStyle = {
-     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-   };
+class App extends React.Component<any, AppState>  {
 
-   return (
-     <SafeAreaView style={backgroundStyle}>
-       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-       <ScrollView
-         contentInsetAdjustmentBehavior="automatic"
-         style={backgroundStyle}>
-         <View
-           style={{
-             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-           }}>
-           <Section title="Step One">
-             OTRRRRRRRRRRRRRRRRRRrrrrrRRRRRRRRRRRRRRRRRRR
-           </Section>
+  teams1: any;
+  teams2: any;
 
-         </View>
-       </ScrollView>
-     </SafeAreaView>
-   );
- };
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      selectedName: []
+    };
 
- const styles = StyleSheet.create({
-   sectionContainer: {
-     marginTop: 32,
-     paddingHorizontal: 24,
-   },
-   sectionTitle: {
-     fontSize: 24,
-     fontWeight: '600',
-   },
-   sectionDescription: {
-     marginTop: 8,
-     fontSize: 18,
-     fontWeight: '400',
-   },
-   highlight: {
-     fontWeight: '700',
-   },
- });
+    this.selectedTeams = this.selectedTeams.bind(this)
+    this.teams1 = [];
+    this.teams2 = [];
 
- export default App;
+  }
+  // const ekipi = (ekipi: any) => {
+  //   {ekipi.map((item: any, key: any) => 
+  //     {
+  //         return(
+  //         <View>
+  //           <Text> {item} </Text>
+  //         </View>
+  //       )
+  //   })}
+  // }
+  
+
+  onSelectionsChange = (selectedName: any) => {
+    // selectedFruits is array of { label, value }
+    this.setState({ selectedName })
+  }
+
+  selectedTeams() {
+
+    this.state.selectedName.sort(() => Math.random() - 0.5);
+
+    this.teams1 = this.state.selectedName.slice(0, 6);
+    this.teams2 = this.state.selectedName.slice(6, 13)
+    console.log("team1", this.teams1)
+    console.log("team2", this.teams2);
+  }
+
+  render() {
+    return (
+      <ScrollView>
+        <Text style={{ margin: 30, fontSize: 20 }}>Perzgjidh lojtaret</Text>
+        <ScrollView>
+          <SelectMultiple
+            style={{height: 300}}
+            items={name}
+            selectedItems={this.state.selectedName}
+            onSelectionsChange={this.onSelectionsChange} />
+          </ScrollView>
+        <View style={styles.btnActions}>
+            <TouchableHighlight
+              style={styles.payBtn}
+              onPress={this.selectedTeams}
+              activeOpacity={0.7}
+              underlayColor={"blue"}>
+              <Text style={styles.payBtnText}>Perzgjidh</Text>
+            </TouchableHighlight>
+        </View>
+        <View>
+          {/* <FlatList
+                        data={this.state.teams1}
+                        renderItem={({ item }) => <OfferContent data={item}/>}
+                        keyExtractor={(item: any, index: any) => index.toString()}
+                        extraData={this.state}
+                        /> */}
+          {/* <this.ekipi> */}
+          {this.teams1.map((member: any) => {
+                <View>
+                  <Text> {member.label} </Text>
+                </View>
+              
+          })}
+        </View>
+      </ScrollView>
+    )
+  }
+}
+export default App
+
+const styles: any = StyleSheet.create({
+  button: {
+    flex: 1,
+    alignSelf: 'center',
+    fontSize: 24,
+    color: '#2754ba'
+  },
+  btnActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  payBtn: {
+    backgroundColor: "blue",
+    paddingHorizontal: 20,
+    paddingVertical: 5,
+    borderRadius: 10,
+    marginTop: 5,
+  },
+  payBtnText: {
+    color: '#fff',
+    fontSize: 17,
+  },
+});
