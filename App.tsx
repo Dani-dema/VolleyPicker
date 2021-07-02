@@ -68,7 +68,7 @@ class App extends React.Component<any, AppState> {
 
   render() {
     return (
-      <ScrollView>
+      <View>
         <View
           style={{
             alignItems: 'center',
@@ -92,20 +92,20 @@ class App extends React.Component<any, AppState> {
         </View>
         <ScrollView>
           <SelectMultiple
-            style={{marginTop: 10, height: 330}}
+            style={{marginTop: 10, height: 260}}
             items={name}
             renderLabel={this.renderLabel}
             selectedItems={this.state.selectedName}
             onSelectionsChange={this.onSelectionsChange}
           />
-        </ScrollView>
+        </ScrollView> 
         <View style={styles.btnActions}>
           <TouchableHighlight
             style={styles.payBtn}
             onPress={this.selectedTeams}
             activeOpacity={0.7}
             underlayColor={'#738C88'}>
-            <Text style={styles.payBtnText}>Perzgjidh</Text>
+            <Text style={styles.payBtnText}>Perzgjidh {this.state.selectedName.length}</Text>
           </TouchableHighlight>
         </View>
         <View style={styles.gridRow}>
@@ -113,26 +113,26 @@ class App extends React.Component<any, AppState> {
             <Text style={{marginBottom: 10, color: '#AA4D4B', fontSize: 20}}>
               EKIPI 1:
             </Text>
-            <FlatList
+            <FlatList 
               data={this.teams1}
               renderItem={({item}) => <OfferContent data={item} />}
               keyExtractor={(item: any, index: any) => index.toString()}
               extraData={this.state}
             />
-          </View>
+            </View>
           <View style={styles.gridCol}>
             <Text style={{marginBottom: 10, color: '#4F997A', fontSize: 20}}>
               EKIPI 2:
             </Text>
-            <FlatList
+            <FlatList 
               data={this.teams2}
               renderItem={({item}) => <OfferContent data={item} />}
               keyExtractor={(item: any, index: any) => index.toString()}
               extraData={this.state}
             />
+            </View>
           </View>
-        </View>
-      </ScrollView>
+      </View>
     );
   }
 }
@@ -164,7 +164,7 @@ const styles: any = StyleSheet.create({
   },
   gridRow: {
     flexDirection: 'row',
-    margin: 50,
+    margin: 35,
     marginTop: 20,
     marginBottom: 0,
     borderWidth: 1.5,
@@ -172,9 +172,9 @@ const styles: any = StyleSheet.create({
     borderRadius: 10,
   },
   gridCol: {
-    margin: '12%',
-    marginTop: '7%',
-    marginBottom: '7%',
+    margin: '10%',
+    marginTop: '6%',
+    marginBottom: '6%',
     flexDirection: 'column',
   },
   ekipet: {
