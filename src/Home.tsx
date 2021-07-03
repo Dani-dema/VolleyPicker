@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import SelectMultiple from 'react-native-select-multiple';
 import {Icon} from 'react-native-elements';
+import AddModal from './AddModal'
 
 interface HomeState {
   selectedName: any;
@@ -20,6 +21,7 @@ class Home extends React.Component<any, HomeState> {
   teams1: any;
   teams2: any;
   name: any;
+  AddModalRef: any;
 
   constructor(props: any) {
     super(props);
@@ -54,6 +56,10 @@ class Home extends React.Component<any, HomeState> {
     this.teams2 = [];
   }
 
+  setAddModalRef = (element: any) => {
+    this.AddModalRef = element;
+  };
+
   onSelectionsChange = (selectedName: any) => {
     this.setState({selectedName});
   };
@@ -68,9 +74,11 @@ class Home extends React.Component<any, HomeState> {
           style={{
             alignItems: 'flex-end',
             flex: 1,
-            right: 25
+            right: 25,
           }}>
-          <TouchableOpacity onPress={() => this.deleteMember(label)} activeOpacity={0.65}>
+          <TouchableOpacity
+            onPress={() => this.deleteMember(label)}
+            activeOpacity={0.65}>
             <Icon name="delete" />
           </TouchableOpacity>
         </View>
@@ -79,18 +87,20 @@ class Home extends React.Component<any, HomeState> {
   };
 
   deleteMember(lojtari: any) {
-    console.log("Lojtari", lojtari)
+    console.log('Lojtari', lojtari);
     const index = this.state.names.indexOf(lojtari);
     if (index > -1) {
       this.state.names.splice(index, 1);
     }
-    this.setState({names: this.state.names})
+    this.setState({names: this.state.names});
 
-    const ndodhet = this.state.selectedName.findIndex((x: any) => x.label === lojtari);
+    const ndodhet = this.state.selectedName.findIndex(
+      (x: any) => x.label === lojtari,
+    );
     if (ndodhet > -1) {
       this.state.selectedName.splice(index, 1);
     }
-    this.setState({selectedName: this.state.selectedName})
+    this.setState({selectedName: this.state.selectedName});
   }
 
   selectedTeams() {
@@ -119,34 +129,60 @@ class Home extends React.Component<any, HomeState> {
     console.log('team1', this.teams1);
     console.log('team2', this.teams2);
 
-    console.log("FUTUUU", this.state.selectedName)
-    this.props.navigation.navigate('Ekipet', {ekipi1: this.teams1, ekipi2: this.teams2, selekto: this.selectedTeams});
+    console.log('FUTUUU', this.state.selectedName);
+    this.props.navigation.navigate('Ekipet', {
+      ekipi1: this.teams1,
+      ekipi2: this.teams2,
+      selekto: this.selectedTeams,
+    });
+  }
+
+  addMember() {
+    this.AddModalRef.openModal();
+  }
+
+  //te rregullohet pse del error kur ruhet emer i ri
+  submitName(emri: any) {
+    console.log("EMRI", emri);
+    this.AddModalRef.closeModal();
+    this.setState({names: this.state.names.push(emri)})
+    this.state.names.push(emri);
   }
 
   render() {
     return (
-          <View>
-            <ScrollView>
-              <SelectMultiple
-                style={{marginTop: 10, height: 600}}
-                items={this.state.names}
-                renderLabel={this.renderLabel}
-                selectedItems={this.state.selectedName}
-                onSelectionsChange={this.onSelectionsChange}
-              />
-            </ScrollView>
-            <View style={styles.btnActions}>
-              <TouchableHighlight
-                style={styles.payBtn}
-                onPress={this.selectedTeams}
-                activeOpacity={0.7}
-                underlayColor={'#738C88'}>
-                <Text style={styles.payBtnText}>
-                  Perzgjidh {this.state.selectedName.length}
-                </Text>
-              </TouchableHighlight>
-            </View>
-          </View>
+      <View>
+        <AddModal
+          ref={this.setAddModalRef}
+          func={this.submitName}
+        />
+        <ScrollView>
+          <SelectMultiple
+            style={{marginTop: 10, height: 600}}
+            items={this.state.names}
+            renderLabel={this.renderLabel}
+            selectedItems={this.state.selectedName}
+            onSelectionsChange={this.onSelectionsChange}
+          />
+        </ScrollView>
+        <View style={styles.btnActions}>
+          <TouchableHighlight
+            style={styles.payBtn}
+            onPress={this.selectedTeams}
+            activeOpacity={0.7}
+            underlayColor={'#738C88'}>
+            <Text style={styles.payBtnText}>
+              Perzgjidh {this.state.selectedName.length}
+            </Text>
+          </TouchableHighlight>
+          <TouchableOpacity
+            style={styles.addBtn}
+            onPress={() => this.addMember()}
+            activeOpacity={0.65}>
+            <Icon name="add" />
+          </TouchableOpacity>
+        </View>
+      </View>
     );
   }
 }
@@ -169,5 +205,24 @@ const styles: any = StyleSheet.create({
   payBtnText: {
     color: '#fff',
     fontSize: 17,
-  }
+  },
+  addBtn: {
+    backgroundColor: 'white',
+    borderRadius: 100,
+    position: 'absolute',
+    right: 80,
+    bottom: -4,
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#0000008c',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 3.65,
+    elevation: 4,
+  },
 });
