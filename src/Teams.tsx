@@ -15,34 +15,10 @@ import SelectMultiple from 'react-native-select-multiple';
 import DeviceInfo from 'react-native-device-info';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import Home from './src/Home';
-import Teams from './src/Teams'
 
-interface AppState {
+interface teamsState {
   selectedName: any;
 }
-
-const name = [
-  'Blerion',
-  'Ramadan',
-  'Kristian',
-  'Klevis',
-  'Tito',
-  'Mile',
-  'Joni',
-  'Sindi',
-  'Ejada',
-  'Visi',
-  'Emi',
-  'Kosta',
-  'Oli',
-  'Erisa',
-  'Ersa',
-  'Iridion',
-  'Miki',
-  'Turi',
-  'Bilishti',
-];
 
 const OfferContent = (props: any) => (
   <View style={styles.emrat}>
@@ -52,29 +28,46 @@ const OfferContent = (props: any) => (
   </View>
 );
 
-const Stack = createStackNavigator();
-
-class App extends React.Component<any, AppState> {
-
-  constructor(props: any) {
-    super(props);
-    this.state = {
-      selectedName: [],
-    };
-  }
-
-  render() {
+function Teams({route, navigation}) {
     return (
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Perzgjidh lojtaret" component={Home} />
-          <Stack.Screen name="Ekipet" component={Teams} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <View>
+        <View style={styles.gridRow}>
+          <View style={styles.gridCol}>
+            <Text style={{marginBottom: 10, color: '#AA4D4B', fontSize: 20}}>
+              EKIPI 1:
+            </Text>
+            <FlatList
+              data={route.params.ekipi1}
+              renderItem={({item}) => <OfferContent data={item} />}
+              keyExtractor={(item: any, index: any) => index.toString()}
+              extraData={route.params.ekipi1}
+            />
+          </View>
+          <View style={styles.gridCol}>
+            <Text style={{marginBottom: 10, color: '#4F997A', fontSize: 20}}>
+              EKIPI 2:
+            </Text>
+            <FlatList
+              data={route.params.ekipi2}
+              renderItem={({item}) => <OfferContent data={item} />}
+              keyExtractor={(item: any, index: any) => index.toString()}
+              extraData={route.params.ekipi2}
+            />
+          </View>
+        </View>
+        <View style={styles.btnActions}>
+          <TouchableHighlight
+            style={styles.payBtn}
+            onPress={route.params.selekto}
+            activeOpacity={0.7}
+            underlayColor={'#738C88'}>
+            <Text style={styles.payBtnText}>Perzi</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
     );
-  }
 }
-export default App;
+export default Teams;
 
 const styles: any = StyleSheet.create({
   button: {
