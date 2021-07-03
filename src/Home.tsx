@@ -9,44 +9,47 @@ import {
   ScrollView
 } from 'react-native';
 import SelectMultiple from 'react-native-select-multiple';
+import {Icon} from 'react-native-elements';
 
 interface HomeState {
   selectedName: any;
+  names: any;
 }
-
-const name = [
-  'Blerion',
-  'Ramadan',
-  'Kristian',
-  'Klevis',
-  'Tito',
-  'Mile',
-  'Joni',
-  'Sindi',
-  'Ejada',
-  'Visi',
-  'Emi',
-  'Kosta',
-  'Oli',
-  'Erisa',
-  'Ersa',
-  'Iridion',
-  'Miki',
-  'Turi',
-  'Bilishti',
-];
 
 class Home extends React.Component<any, HomeState> {
   teams1: any;
   teams2: any;
+  name: any;
 
   constructor(props: any) {
     super(props);
     this.state = {
       selectedName: [],
+      names: [
+        'Blerion',
+        'Ramadan',
+        'Kristian',
+        'Klevis',
+        'Tito',
+        'Mile',
+        'Joni',
+        'Sindi',
+        'Ejada',
+        'Visi',
+        'Emi',
+        'Kosta',
+        'Oli',
+        'Erisa',
+        'Ersa',
+        'Iridion',
+        'Miki',
+        'Turi',
+        'Bilishti',
+      ],
     };
 
     this.selectedTeams = this.selectedTeams.bind(this);
+    this.deleteMember = this.deleteMember.bind(this);
     this.teams1 = [];
     this.teams2 = [];
   }
@@ -55,15 +58,40 @@ class Home extends React.Component<any, HomeState> {
     this.setState({selectedName});
   };
 
-  renderLabel = (label: any, style: any) => {
+  renderLabel = (label: any) => {
     return (
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+      <View style={{flexDirection: 'row'}}>
         <View style={{marginLeft: 5}}>
           <Text style={{fontSize: 20, color: '#304249'}}>{label}</Text>
+        </View>
+        <View
+          style={{
+            alignItems: 'flex-end',
+            flex: 1,
+            right: 25
+          }}>
+          <TouchableOpacity onPress={() => this.deleteMember(label)} activeOpacity={0.65}>
+            <Icon name="delete" />
+          </TouchableOpacity>
         </View>
       </View>
     );
   };
+
+  deleteMember(lojtari: any) {
+    console.log("Lojtari", lojtari)
+    const index = this.state.names.indexOf(lojtari);
+    if (index > -1) {
+      this.state.names.splice(index, 1);
+    }
+    this.setState({names: this.state.names})
+
+    const ndodhet = this.state.selectedName.findIndex((x: any) => x.label === lojtari);
+    if (ndodhet > -1) {
+      this.state.selectedName.splice(index, 1);
+    }
+    this.setState({selectedName: this.state.selectedName})
+  }
 
   selectedTeams() {
     this.setState({selectedName: this.state.selectedName});
@@ -101,7 +129,7 @@ class Home extends React.Component<any, HomeState> {
             <ScrollView>
               <SelectMultiple
                 style={{marginTop: 10, height: 600}}
-                items={name}
+                items={this.state.names}
                 renderLabel={this.renderLabel}
                 selectedItems={this.state.selectedName}
                 onSelectionsChange={this.onSelectionsChange}
