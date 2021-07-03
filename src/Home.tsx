@@ -1,5 +1,4 @@
-import 'react-native-gesture-handler';
-import React, {Component} from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -7,14 +6,9 @@ import {
   TextInput,
   StyleSheet,
   TouchableHighlight,
-  ScrollView,
-  FlatList,
-  Image,
+  ScrollView
 } from 'react-native';
 import SelectMultiple from 'react-native-select-multiple';
-import DeviceInfo from 'react-native-device-info';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
 
 interface HomeState {
   selectedName: any;
@@ -131,12 +125,6 @@ class Home extends React.Component<any, HomeState> {
 export default Home;
 
 const styles: any = StyleSheet.create({
-  button: {
-    flex: 1,
-    alignSelf: 'center',
-    fontSize: 24,
-    color: '#2754ba',
-  },
   btnActions: {
     marginTop: 35,
     flexDirection: 'row',
@@ -153,35 +141,5 @@ const styles: any = StyleSheet.create({
   payBtnText: {
     color: '#fff',
     fontSize: 17,
-  },
-  gridRow: {
-    flexDirection: 'row',
-    margin: 35,
-    marginTop: 20,
-    marginBottom: 0,
-    borderWidth: 1.5,
-    borderColor: '#738C88',
-    borderRadius: 10,
-  },
-  gridCol: {
-    margin: '10%',
-    marginTop: '6%',
-    marginBottom: '6%',
-    flexDirection: 'column',
-  },
-  ekipet: {
-    marginBottom: 10,
-  },
-  emrat: {
-    borderColor: '#72bcd4',
-    borderWidth: 1.5,
-    padding: 1,
-    marginBottom: 5,
-  },
-  emri: {
-    fontSize: 20,
-  },
-  emriVecanti: {
-    margin: 5,
-  },
+  }
 });

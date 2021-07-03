@@ -1,20 +1,11 @@
-import 'react-native-gesture-handler';
-import React, {Component} from 'react';
+import React from 'react';
 import {
   View,
   Text,
-  TouchableOpacity,
-  TextInput,
   StyleSheet,
   TouchableHighlight,
-  ScrollView,
   FlatList,
-  Image,
 } from 'react-native';
-import SelectMultiple from 'react-native-select-multiple';
-import DeviceInfo from 'react-native-device-info';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
 
 interface teamsState {
   selectedName: any;
@@ -70,12 +61,6 @@ function Teams({route, navigation}) {
 export default Teams;
 
 const styles: any = StyleSheet.create({
-  button: {
-    flex: 1,
-    alignSelf: 'center',
-    fontSize: 24,
-    color: '#2754ba',
-  },
   btnActions: {
     marginTop: 35,
     flexDirection: 'row',
@@ -107,9 +92,6 @@ const styles: any = StyleSheet.create({
     marginTop: '6%',
     marginBottom: '6%',
     flexDirection: 'column',
-  },
-  ekipet: {
-    marginBottom: 10,
   },
   emrat: {
     borderColor: '#72bcd4',
