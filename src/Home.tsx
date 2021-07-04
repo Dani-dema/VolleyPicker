@@ -11,7 +11,7 @@ import {
 import SelectMultiple from 'react-native-select-multiple';
 import {Icon} from 'react-native-elements';
 import AddModal from './AddModal';
-import AsyncStorage from '@react-native-community/async-storage';
+import {MMKV} from 'react-native-mmkv';
 
 interface HomeState {
   selectedName: any;
@@ -28,7 +28,8 @@ class Home extends React.Component<any, HomeState> {
     super(props);
     this.state = {
       selectedName: [],
-      names:
+      names: MMKV.getString('lojtaret') ?
+      JSON.parse(MMKV.getString('lojtaret')) :
       [
         'Blerion',
         'Ramadan',
@@ -57,6 +58,12 @@ class Home extends React.Component<any, HomeState> {
     this.submitName = this.submitName.bind(this);
     this.teams1 = [];
     this.teams2 = [];
+  }
+
+  componentDidMount() {
+    //MMKV.delete('lojtaret'); //ckomentoje ne rast resetimi i local storage
+    console.log('EMRAT LOJTARVE', JSON.parse(MMKV.getString('lojtaret')));
+
   }
 
   setAddModalRef = (element: any) => {
@@ -94,7 +101,6 @@ class Home extends React.Component<any, HomeState> {
 
     this.state.selectedName.sort(() => Math.random() - 0.5);
     let ekipet = this.state.selectedName;
-    //console.log('EKIPETTTT', ekipet.length);
 
     let teams: any = [];
 
@@ -112,10 +118,7 @@ class Home extends React.Component<any, HomeState> {
       this.teams1 = teams.slice(0, mesi);
       this.teams2 = teams.slice(mesi, ekipet.length);
     }
-    // console.log('team1', this.teams1);
-    // console.log('team2', this.teams2);
 
-    // console.log('FUTUUU', this.state.selectedName);
     this.props.navigation.navigate('Ekipet', {
       ekipi1: this.teams1,
       ekipi2: this.teams2,
@@ -124,12 +127,8 @@ class Home extends React.Component<any, HomeState> {
   }
 
   _storeData = async (emrat: any) => {
-    console.log("A KA EMRA A JO", emrat)
     try {
-      await AsyncStorage.setItem(
-        'LOJTARET',
-        emrat.toString()
-      );
+      MMKV.set('lojtaret', JSON.stringify(emrat));
     } catch (error) {
       console.log("STORAGE ERROR", error)
     }
@@ -140,8 +139,6 @@ class Home extends React.Component<any, HomeState> {
   }
 
   submitName(emri: any) {
-    console.log("EMRI", emri);
-
     this.AddModalRef.closeModal();
     this.state.names.push(emri);
     this.setState({names: this.state.names});
@@ -150,7 +147,6 @@ class Home extends React.Component<any, HomeState> {
   }
 
   deleteMember(lojtari: any) {
-    console.log('Lojtari', lojtari);
     const index = this.state.names.indexOf(lojtari);
     if (index > -1) {
       this.state.names.splice(index, 1);

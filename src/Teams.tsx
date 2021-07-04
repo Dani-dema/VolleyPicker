@@ -4,9 +4,9 @@ import {
   Text,
   StyleSheet,
   TouchableHighlight,
-  FlatList,
-  AsyncStorage
+  FlatList
 } from 'react-native';
+import { MMKV } from 'react-native-mmkv';
 
 interface teamsState {
   selectedName: any;
@@ -21,17 +21,6 @@ const OfferContent = (props: any) => (
 );
 
 const Teams: any = ({route, navigation}) => {
-    useEffect(() => {
-      try {
-        const value = AsyncStorage.getItem('LOJTARET');
-        if (value !== null) {
-          console.log("KEMI LOJTAR", value);
-        }
-      } catch (error) {
-        console.log("ERROR IN RETRIEVING STORAGE", error)
-      }
-    }, [])
-
     return (
       <View>
         <View style={styles.gridRow}>
