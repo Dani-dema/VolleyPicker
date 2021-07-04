@@ -62,8 +62,6 @@ class Home extends React.Component<any, HomeState> {
 
   componentDidMount() {
     //MMKV.delete('lojtaret'); //ckomentoje ne rast resetimi i local storage
-    console.log('EMRAT LOJTARVE', JSON.parse(MMKV.getString('lojtaret')));
-
   }
 
   setAddModalRef = (element: any) => {
