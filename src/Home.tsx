@@ -79,7 +79,7 @@ class Home extends React.Component<any, HomeState> {
           <TouchableOpacity
             onPress={() => this.deleteMember(label)}
             activeOpacity={0.65}>
-            <Icon name="delete" />
+            <Icon name="delete" color="#738C88"/>
           </TouchableOpacity>
         </View>
       </View>
@@ -98,7 +98,7 @@ class Home extends React.Component<any, HomeState> {
       (x: any) => x.label === lojtari,
     );
     if (ndodhet > -1) {
-      this.state.selectedName.splice(index, 1);
+      this.state.selectedName.splice(ndodhet, 1);
     }
     this.setState({selectedName: this.state.selectedName});
   }
