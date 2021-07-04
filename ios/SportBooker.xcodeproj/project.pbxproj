@@ -8,28 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* SportBookerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SportBookerTests.m */; };
-		11B2C5811AC9BB22E5F80136 /* libPods-SportBooker-SportBookerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4573F254A1895738EADEFD1F /* libPods-SportBooker-SportBookerTests.a */; };
+		132017A0538A4690B2D48C6C /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A0092327CED469790F0ECD1 /* Zocial.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3793417F96EDDB07C3E40D9F /* libPods-SportBooker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 559E87E79D1DA2537A220962 /* libPods-SportBooker.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		ED71904415E8461895B9FA51 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AE827675D9A4472A966F580 /* AntDesign.ttf */; };
+		29FF9055F6A9A7B3B37B6B1E /* libPods-SportBooker-SportBookerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3482CEC64965420F3FFA5 /* libPods-SportBooker-SportBookerTests.a */; };
+		2F58C96D55174352A24E4811 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45E4DB3C3646453595E95D01 /* Ionicons.ttf */; };
+		3B4FBD0D81C0411EAF63AA63 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A0B6078D1644F9FAE846C08 /* FontAwesome5_Regular.ttf */; };
 		4862AA0387404CBA9997A2E9 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE794F0ACDB249B2A03ECC86 /* Entypo.ttf */; };
-		C528CF1BB5864F4894907C76 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D142FBB2523497FB20D86F4 /* EvilIcons.ttf */; };
+		568D8E0EEFD84D4EB4F2815D /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572C814C409F47958136CD40 /* Fontisto.ttf */; };
+		58AF9669E1F5468BBA4956C8 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0E5568D0FF54FDB92B88208 /* SimpleLineIcons.ttf */; };
+		6907301262D8409F96231F49 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4970E798D99340679E7D5478 /* FontAwesome5_Solid.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		862E1E9ADA9941CA9D2A1D10 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5CB0C1AD09741B491824BBA /* Feather.ttf */; };
 		88F7997E331E433EA36791B2 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56AB582E78C546449AAC76B5 /* FontAwesome.ttf */; };
-		BCC878FE60D44A79A71E0F00 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 551AD7D3628947D2AA20BC53 /* FontAwesome5_Brands.ttf */; };
-		3B4FBD0D81C0411EAF63AA63 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A0B6078D1644F9FAE846C08 /* FontAwesome5_Regular.ttf */; };
-		6907301262D8409F96231F49 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4970E798D99340679E7D5478 /* FontAwesome5_Solid.ttf */; };
-		568D8E0EEFD84D4EB4F2815D /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572C814C409F47958136CD40 /* Fontisto.ttf */; };
-		D403AC94AF9547CD89ABFCF0 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54D8479940EA4C149E3268AC /* Foundation.ttf */; };
-		2F58C96D55174352A24E4811 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45E4DB3C3646453595E95D01 /* Ionicons.ttf */; };
 		979019244B3B47C79EC3B7EA /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC391139234E699AE20179 /* MaterialCommunityIcons.ttf */; };
-		C63BF83F3A614B17BFC432ED /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01906A7072E442BA84F19EAD /* MaterialIcons.ttf */; };
+		A47A49A4EBFE53CE7FA19490 /* libPods-SportBooker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66697D6277CE07E5969920F0 /* libPods-SportBooker.a */; };
 		B74C72F959584223A4844422 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CABA42C0171B429DBD9C54C7 /* Octicons.ttf */; };
-		58AF9669E1F5468BBA4956C8 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0E5568D0FF54FDB92B88208 /* SimpleLineIcons.ttf */; };
-		132017A0538A4690B2D48C6C /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A0092327CED469790F0ECD1 /* Zocial.ttf */; };
+		BCC878FE60D44A79A71E0F00 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 551AD7D3628947D2AA20BC53 /* FontAwesome5_Brands.ttf */; };
+		C528CF1BB5864F4894907C76 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D142FBB2523497FB20D86F4 /* EvilIcons.ttf */; };
+		C63BF83F3A614B17BFC432ED /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01906A7072E442BA84F19EAD /* MaterialIcons.ttf */; };
+		D403AC94AF9547CD89ABFCF0 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54D8479940EA4C149E3268AC /* Foundation.ttf */; };
+		ED71904415E8461895B9FA51 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AE827675D9A4472A966F580 /* AntDesign.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,36 +46,36 @@
 		00E356EE1AD99517003FC87E /* SportBookerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportBookerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SportBookerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SportBookerTests.m; sourceTree = "<group>"; };
+		01906A7072E442BA84F19EAD /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SportBooker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportBooker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SportBooker/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SportBooker/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SportBooker/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SportBooker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SportBooker/main.m; sourceTree = "<group>"; };
-		1E9A27CDDD0093064D877B3C /* Pods-SportBooker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBooker.release.xcconfig"; path = "Target Support Files/Pods-SportBooker/Pods-SportBooker.release.xcconfig"; sourceTree = "<group>"; };
-		21BB83E5B846B533E2B04BDC /* Pods-SportBooker-SportBookerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBooker-SportBookerTests.release.xcconfig"; path = "Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests.release.xcconfig"; sourceTree = "<group>"; };
-		4573F254A1895738EADEFD1F /* libPods-SportBooker-SportBookerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportBooker-SportBookerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		559E87E79D1DA2537A220962 /* libPods-SportBooker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportBooker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DB7EEF6EB7CB1E89E51C4FB /* Pods-SportBooker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBooker.debug.xcconfig"; path = "Target Support Files/Pods-SportBooker/Pods-SportBooker.debug.xcconfig"; sourceTree = "<group>"; };
-		72B4D5AD63AFC5DDE8668047 /* Pods-SportBooker-SportBookerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBooker-SportBookerTests.debug.xcconfig"; path = "Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2DDC391139234E699AE20179 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		3A0092327CED469790F0ECD1 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		3FC3482CEC64965420F3FFA5 /* libPods-SportBooker-SportBookerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportBooker-SportBookerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E4DB3C3646453595E95D01 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		4970E798D99340679E7D5478 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		54D8479940EA4C149E3268AC /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		551AD7D3628947D2AA20BC53 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		56AB582E78C546449AAC76B5 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		572C814C409F47958136CD40 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		5A0B6078D1644F9FAE846C08 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		5FF8304BAB663149BB54FE1C /* Pods-SportBooker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBooker.release.xcconfig"; path = "Target Support Files/Pods-SportBooker/Pods-SportBooker.release.xcconfig"; sourceTree = "<group>"; };
+		66697D6277CE07E5969920F0 /* libPods-SportBooker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportBooker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D142FBB2523497FB20D86F4 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		7AE827675D9A4472A966F580 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SportBooker/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B801B398DCEA639610A8CF8C /* Pods-SportBooker-SportBookerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBooker-SportBookerTests.release.xcconfig"; path = "Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C5CB0C1AD09741B491824BBA /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		CABA42C0171B429DBD9C54C7 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		CE794F0ACDB249B2A03ECC86 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		DED93CB3F7F5A0EFCB1B6D0D /* Pods-SportBooker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBooker.debug.xcconfig"; path = "Target Support Files/Pods-SportBooker/Pods-SportBooker.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		7AE827675D9A4472A966F580 /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CE794F0ACDB249B2A03ECC86 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6D142FBB2523497FB20D86F4 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C5CB0C1AD09741B491824BBA /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		56AB582E78C546449AAC76B5 /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		551AD7D3628947D2AA20BC53 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5A0B6078D1644F9FAE846C08 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4970E798D99340679E7D5478 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		572C814C409F47958136CD40 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		54D8479940EA4C149E3268AC /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		45E4DB3C3646453595E95D01 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2DDC391139234E699AE20179 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		01906A7072E442BA84F19EAD /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CABA42C0171B429DBD9C54C7 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F0E5568D0FF54FDB92B88208 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3A0092327CED469790F0ECD1 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0E5568D0FF54FDB92B88208 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		F838F0B6125532DF147AB7C5 /* Pods-SportBooker-SportBookerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBooker-SportBookerTests.debug.xcconfig"; path = "Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B2C5811AC9BB22E5F80136 /* libPods-SportBooker-SportBookerTests.a in Frameworks */,
+				29FF9055F6A9A7B3B37B6B1E /* libPods-SportBooker-SportBookerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3793417F96EDDB07C3E40D9F /* libPods-SportBooker.a in Frameworks */,
+				A47A49A4EBFE53CE7FA19490 /* libPods-SportBooker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				559E87E79D1DA2537A220962 /* libPods-SportBooker.a */,
-				4573F254A1895738EADEFD1F /* libPods-SportBooker-SportBookerTests.a */,
+				66697D6277CE07E5969920F0 /* libPods-SportBooker.a */,
+				3FC3482CEC64965420F3FFA5 /* libPods-SportBooker-SportBookerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,12 +141,11 @@
 		5E3BDF886A049F289B86D4AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6DB7EEF6EB7CB1E89E51C4FB /* Pods-SportBooker.debug.xcconfig */,
-				1E9A27CDDD0093064D877B3C /* Pods-SportBooker.release.xcconfig */,
-				72B4D5AD63AFC5DDE8668047 /* Pods-SportBooker-SportBookerTests.debug.xcconfig */,
-				21BB83E5B846B533E2B04BDC /* Pods-SportBooker-SportBookerTests.release.xcconfig */,
+				DED93CB3F7F5A0EFCB1B6D0D /* Pods-SportBooker.debug.xcconfig */,
+				5FF8304BAB663149BB54FE1C /* Pods-SportBooker.release.xcconfig */,
+				F838F0B6125532DF147AB7C5 /* Pods-SportBooker-SportBookerTests.debug.xcconfig */,
+				B801B398DCEA639610A8CF8C /* Pods-SportBooker-SportBookerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,7 +182,7 @@
 			sourceTree = "<group>";
 		};
 		8CE1507A94F5478790C76BA0 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				7AE827675D9A4472A966F580 /* AntDesign.ttf */,
 				CE794F0ACDB249B2A03ECC86 /* Entypo.ttf */,
@@ -204,7 +203,6 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -213,12 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SportBookerTests" */;
 			buildPhases = (
-				963A2A7206AD65A157C6D853 /* [CP] Check Pods Manifest.lock */,
+				535C18A81C0DEFCCFB1FEF1A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				9AA41AD803CCECDB00889922 /* [CP] Embed Pods Frameworks */,
-				734075A34133AE2CC803ABC0 /* [CP] Copy Pods Resources */,
+				A5F86991017C401F2E7D03DE /* [CP] Embed Pods Frameworks */,
+				6CE4B9583E5C33A2F08F40EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,14 +232,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SportBooker" */;
 			buildPhases = (
-				E3D73ACC9B051A4F0C73A107 /* [CP] Check Pods Manifest.lock */,
+				20F93717B65C89B61F54BEBF /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				F267144B37E6C1C740B6D724 /* [CP] Embed Pods Frameworks */,
-				DDF37B36AF2A02239A6AE7B7 /* [CP] Copy Pods Resources */,
+				1315F9BD74018BFD3A3D20C5 /* [CP] Embed Pods Frameworks */,
+				8EA3578353D53BBA96D44D22 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -338,80 +336,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		734075A34133AE2CC803ABC0 /* [CP] Copy Pods Resources */ = {
+		1315F9BD74018BFD3A3D20C5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		963A2A7206AD65A157C6D853 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SportBooker-SportBookerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9AA41AD803CCECDB00889922 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DDF37B36AF2A02239A6AE7B7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E3D73ACC9B051A4F0C73A107 /* [CP] Check Pods Manifest.lock */ = {
+		20F93717B65C89B61F54BEBF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -433,21 +375,77 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F267144B37E6C1C740B6D724 /* [CP] Embed Pods Frameworks */ = {
+		535C18A81C0DEFCCFB1FEF1A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SportBooker-SportBookerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CE4B9583E5C33A2F08F40EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA3578353D53BBA96D44D22 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportBooker/Pods-SportBooker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5F86991017C401F2E7D03DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportBooker-SportBookerTests/Pods-SportBooker-SportBookerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -502,7 +500,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72B4D5AD63AFC5DDE8668047 /* Pods-SportBooker-SportBookerTests.debug.xcconfig */;
+			baseConfigurationReference = F838F0B6125532DF147AB7C5 /* Pods-SportBooker-SportBookerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -529,7 +527,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21BB83E5B846B533E2B04BDC /* Pods-SportBooker-SportBookerTests.release.xcconfig */;
+			baseConfigurationReference = B801B398DCEA639610A8CF8C /* Pods-SportBooker-SportBookerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -553,7 +551,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DB7EEF6EB7CB1E89E51C4FB /* Pods-SportBooker.debug.xcconfig */;
+			baseConfigurationReference = DED93CB3F7F5A0EFCB1B6D0D /* Pods-SportBooker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -579,7 +577,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E9A27CDDD0093064D877B3C /* Pods-SportBooker.release.xcconfig */;
+			baseConfigurationReference = 5FF8304BAB663149BB54FE1C /* Pods-SportBooker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

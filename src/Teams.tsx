@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TouchableHighlight,
   FlatList,
+  AsyncStorage
 } from 'react-native';
 
 interface teamsState {
@@ -19,7 +20,18 @@ const OfferContent = (props: any) => (
   </View>
 );
 
-function Teams({route, navigation}) {
+const Teams: any = ({route, navigation}) => {
+    useEffect(() => {
+      try {
+        const value = AsyncStorage.getItem('LOJTARET');
+        if (value !== null) {
+          console.log("KEMI LOJTAR", value);
+        }
+      } catch (error) {
+        console.log("ERROR IN RETRIEVING STORAGE", error)
+      }
+    }, [])
+
     return (
       <View>
         <View style={styles.gridRow}>

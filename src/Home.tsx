@@ -6,11 +6,12 @@ import {
   TextInput,
   StyleSheet,
   TouchableHighlight,
-  ScrollView
+  ScrollView,
 } from 'react-native';
 import SelectMultiple from 'react-native-select-multiple';
 import {Icon} from 'react-native-elements';
-import AddModal from './AddModal'
+import AddModal from './AddModal';
+import AsyncStorage from '@react-native-community/async-storage';
 
 interface HomeState {
   selectedName: any;
@@ -27,7 +28,8 @@ class Home extends React.Component<any, HomeState> {
     super(props);
     this.state = {
       selectedName: [],
-      names: [
+      names:
+      [
         'Blerion',
         'Ramadan',
         'Kristian',
@@ -47,11 +49,12 @@ class Home extends React.Component<any, HomeState> {
         'Miki',
         'Turi',
         'Bilishti',
-      ],
+      ]
     };
 
     this.selectedTeams = this.selectedTeams.bind(this);
     this.deleteMember = this.deleteMember.bind(this);
+    this.submitName = this.submitName.bind(this);
     this.teams1 = [];
     this.teams2 = [];
   }
@@ -86,29 +89,12 @@ class Home extends React.Component<any, HomeState> {
     );
   };
 
-  deleteMember(lojtari: any) {
-    console.log('Lojtari', lojtari);
-    const index = this.state.names.indexOf(lojtari);
-    if (index > -1) {
-      this.state.names.splice(index, 1);
-    }
-    this.setState({names: this.state.names});
-
-    const ndodhet = this.state.selectedName.findIndex(
-      (x: any) => x.label === lojtari,
-    );
-    if (ndodhet > -1) {
-      this.state.selectedName.splice(ndodhet, 1);
-    }
-    this.setState({selectedName: this.state.selectedName});
-  }
-
   selectedTeams() {
     this.setState({selectedName: this.state.selectedName});
 
     this.state.selectedName.sort(() => Math.random() - 0.5);
     let ekipet = this.state.selectedName;
-    console.log('EKIPETTTT', ekipet.length);
+    //console.log('EKIPETTTT', ekipet.length);
 
     let teams: any = [];
 
@@ -126,10 +112,10 @@ class Home extends React.Component<any, HomeState> {
       this.teams1 = teams.slice(0, mesi);
       this.teams2 = teams.slice(mesi, ekipet.length);
     }
-    console.log('team1', this.teams1);
-    console.log('team2', this.teams2);
+    // console.log('team1', this.teams1);
+    // console.log('team2', this.teams2);
 
-    console.log('FUTUUU', this.state.selectedName);
+    // console.log('FUTUUU', this.state.selectedName);
     this.props.navigation.navigate('Ekipet', {
       ekipi1: this.teams1,
       ekipi2: this.teams2,
@@ -137,16 +123,48 @@ class Home extends React.Component<any, HomeState> {
     });
   }
 
+  _storeData = async (emrat: any) => {
+    console.log("A KA EMRA A JO", emrat)
+    try {
+      await AsyncStorage.setItem(
+        'LOJTARET',
+        emrat.toString()
+      );
+    } catch (error) {
+      console.log("STORAGE ERROR", error)
+    }
+  };
+
   addMember() {
     this.AddModalRef.openModal();
   }
 
-  //te rregullohet pse del error kur ruhet emer i ri
   submitName(emri: any) {
     console.log("EMRI", emri);
+
     this.AddModalRef.closeModal();
-    this.setState({names: this.state.names.push(emri)})
     this.state.names.push(emri);
+    this.setState({names: this.state.names});
+
+    this._storeData(this.state.names);
+  }
+
+  deleteMember(lojtari: any) {
+    console.log('Lojtari', lojtari);
+    const index = this.state.names.indexOf(lojtari);
+    if (index > -1) {
+      this.state.names.splice(index, 1);
+    }
+    this.setState({names: this.state.names});
+    this._storeData(this.state.names);
+
+    const ndodhet = this.state.selectedName.findIndex(
+      (x: any) => x.label === lojtari,
+    );
+    if (ndodhet > -1) {
+      this.state.selectedName.splice(ndodhet, 1);
+    }
+    this.setState({selectedName: this.state.selectedName});
   }
 
   render() {

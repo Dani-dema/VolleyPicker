@@ -30,7 +30,7 @@ class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
   };
 
   closeModal = () => {
-    this.setState({open: false});
+    this.setState({open: false, name: ""});
   };
 
   updateName = (value: string) => {
@@ -59,7 +59,6 @@ class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
               autoCompleteType="off"
               autoCorrect={false}
               placeholder={'Emri'}
-              //onSubmitEditing={() => this.props.func(this.state.name)}
             />
             <View style={styles.modalFooter}>
               <TouchableOpacity
