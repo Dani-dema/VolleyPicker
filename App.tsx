@@ -13,8 +13,12 @@ class App extends React.Component {
     return (
       <SafeAreaProvider>
         <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name="Perzgjidh lojtaret" component={Home} />
+          <Stack.Navigator  >
+            <Stack.Screen name="Zgjidhni lojtaret" component={Home}   options={{
+          headerTitleStyle: {
+          textAlign:'center'
+          },
+        }} />
             <Stack.Screen name="Ekipet" component={Teams} />
           </Stack.Navigator>
         </NavigationContainer>
