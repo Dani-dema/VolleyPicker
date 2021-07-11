@@ -3,7 +3,6 @@ import {
   View,
   Text,
   TouchableOpacity,
-  TextInput,
   StyleSheet,
   TouchableHighlight,
   ScrollView,
@@ -16,6 +15,7 @@ import {MMKV} from 'react-native-mmkv';
 interface HomeState {
   selectedName: any;
   names: any;
+  vlersimet: any;
 }
 
 class Home extends React.Component<any, HomeState> {
@@ -28,29 +28,52 @@ class Home extends React.Component<any, HomeState> {
     super(props);
     this.state = {
       selectedName: [],
-      names: MMKV.getString('lojtaret') ?
-      JSON.parse(MMKV.getString('lojtaret')) :
-      [
-        'Blerion',
-        'Ramadan',
-        'Kristian',
-        'Klevis',
-        'Tito',
-        'Mile',
-        'Joni',
-        'Sindi',
-        'Ejada',
-        'Visi',
-        'Emi',
-        'Kosta',
-        'Oli',
-        'Erisa',
-        'Ersa',
-        'Iridion',
-        'Miki',
-        'Turi',
-        'Bilishti',
-      ]
+      names: MMKV.getString('lojtaret')
+        ? JSON.parse(MMKV.getString('lojtaret'))
+        : [
+            'Blerion',
+            'Ramadan',
+            'Kristian',
+            'Klevis',
+            'Tito',
+            'Mile',
+            'Joni',
+            'Sindi',
+            'Ejada',
+            'Visi',
+            'Emi',
+            'Kosta',
+            'Oli',
+            'Erisa',
+            'Ersa',
+            'Iridion',
+            'Miki',
+            'Turi',
+            'Bilishti',
+          ],
+      vlersimet: MMKV.getString('vlersimet')
+        ? JSON.parse(MMKV.getString('vlersimet'))
+        : [
+            5,
+            4,
+            4,
+            3,
+            5,
+            5,
+            3,
+            3,
+            3,
+            1,
+            3,
+            4,
+            4,
+            1,
+            2,
+            4,
+            3,
+            4,
+            3,
+          ],
     };
 
     this.selectedTeams = this.selectedTeams.bind(this);
@@ -61,7 +84,9 @@ class Home extends React.Component<any, HomeState> {
   }
 
   componentDidMount() {
-    //MMKV.delete('lojtaret'); //ckomentoje ne rast resetimi i local storage
+    //ckomentoje ne rast resetimi i local storage
+    // MMKV.delete('lojtaret');
+    // MMKV.delete('vlersimet');
   }
 
   setAddModalRef = (element: any) => {
@@ -97,36 +122,57 @@ class Home extends React.Component<any, HomeState> {
   selectedTeams() {
     this.setState({selectedName: this.state.selectedName});
 
+    //bejme shuffle arrayn
     this.state.selectedName.sort(() => Math.random() - 0.5);
     let ekipet = this.state.selectedName;
 
     let teams: any = [];
+    let valutat: any = [];
 
+    //mbushim arrayn e emrave dhe vlerat perkatese
     {
-      ekipet.map((item: any, key: any) => {
+      ekipet.forEach((item: any, key: any) => {
         teams.push(item.label);
+        //gjejme vleren perkatese
+        const index = this.state.names.indexOf(item.label);
+        valutat.push(this.state.vlersimet[index]);
       });
     }
 
-    if (ekipet.length >= 12) {
-      this.teams1 = teams.slice(0, 6);
-      this.teams2 = teams.slice(6, 12);
-    } else {
-      let mesi = ekipet.length / 2;
-      this.teams1 = teams.slice(0, mesi);
-      this.teams2 = teams.slice(mesi, ekipet.length);
+    //gjejme totalin e vlerave te selektuarve
+    let total=0;
+    for (let i=0; i<ekipet.length; i++) {
+      total+=valutat[i];
     }
 
-    this.props.navigation.navigate('Ekipet', {
-      ekipi1: this.teams1,
-      ekipi2: this.teams2,
-      selekto: this.selectedTeams,
-    });
+    //gjejme vleren totale te gjysmes se pare te selektuarve
+    let mesi = ekipet.length / 2;
+    let shuma=0;
+    for (let i=0; i<mesi; i++) {
+      shuma+=valutat[i];
+    }
+
+    //shofim nese kjo shume e gjysmes se pare bie ne rangun ±1 te gjysmes totale
+    if ((shuma<(total/2)+1) && (shuma>(total/2)-1)) {
+      //nese po atehere ndahen ekipet dhe behet kalimi ne screenin tjeter
+      this.teams1 = teams.slice(0, mesi);
+      this.teams2 = teams.slice(mesi, ekipet.length);
+
+      this.props.navigation.navigate('Ekipet', {
+        ekipi1: this.teams1,
+        ekipi2: this.teams2,
+        selekto: this.selectedTeams,
+      });
+    } else {
+      //nese jo therrasim perseri ne menyre rekursive funksionin per ta provuar serish
+      this.selectedTeams();
+    }
   }
 
-  _storeData = async (emrat: any) => {
+  _storeData = async (emrat: any, vlersimet: any) => {
     try {
       MMKV.set('lojtaret', JSON.stringify(emrat));
+      MMKV.set('vlersimet', JSON.stringify(vlersimet));
     } catch (error) {
       console.log("STORAGE ERROR", error)
     }
@@ -136,21 +182,26 @@ class Home extends React.Component<any, HomeState> {
     this.AddModalRef.openModal();
   }
 
-  submitName(emri: any) {
+  submitName(emri: any, vlersimi: any) {
     this.AddModalRef.closeModal();
     this.state.names.push(emri);
-    this.setState({names: this.state.names});
+    this.state.vlersimet.push(vlersimi.parseInt());
 
-    this._storeData(this.state.names);
+    this.setState({names: this.state.names});
+    this.setState({vlersimet: this.state.vlersimet});
+
+    this._storeData(this.state.names, this.state.vlersimet);
   }
 
   deleteMember(lojtari: any) {
     const index = this.state.names.indexOf(lojtari);
     if (index > -1) {
       this.state.names.splice(index, 1);
+      this.state.vlersimet.splice(index, 1);
     }
     this.setState({names: this.state.names});
-    this._storeData(this.state.names);
+    this.setState({vlersimet: this.state.vlersimet});
+    this._storeData(this.state.names, this.state.vlersimet);
 
     const ndodhet = this.state.selectedName.findIndex(
       (x: any) => x.label === lojtari,
