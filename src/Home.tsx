@@ -122,6 +122,7 @@ class Home extends React.Component<any, HomeState> {
   selectedTeams() {
     this.setState({selectedName: this.state.selectedName});
 
+    if(this.state.selectedName.length < 8) return;
     //bejme shuffle arrayn
     this.state.selectedName.sort(() => Math.random() - 0.5);
     let ekipet = this.state.selectedName;
@@ -183,9 +184,12 @@ class Home extends React.Component<any, HomeState> {
   }
 
   submitName(emri: any, vlersimi: any) {
+
+    if(!emri || !vlersimi) return;
+
     this.AddModalRef.closeModal();
     this.state.names.push(emri);
-    this.state.vlersimet.push(vlersimi.parseInt());
+    this.state.vlersimet.push(parseInt(vlersimi));
 
     this.setState({names: this.state.names});
     this.setState({vlersimet: this.state.vlersimet});

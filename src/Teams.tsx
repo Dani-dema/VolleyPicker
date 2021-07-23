@@ -53,7 +53,7 @@ const Teams: any = ({route, navigation}) => {
             onPress={route.params.selekto}
             activeOpacity={0.7}
             underlayColor={'#738C88'}>
-            <Text style={styles.payBtnText}>Perzi</Text>
+            <Text style={styles.payBtnText}>Perziej</Text>
           </TouchableHighlight>
         </View>
       </View>

@@ -32,7 +32,7 @@ class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
   };
 
   closeModal = () => {
-    this.setState({open: false, name: ''});
+    this.setState({open: false, name: '',value:""});
   };
 
   updateName = (value: string) => {
@@ -72,6 +72,7 @@ class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
               value={this.state.value}
               autoCompleteType="off"
               autoCorrect={false}
+               keyboardType = {"number-pad"}
               placeholder={'Vlersimi'}
             />
             <View style={styles.modalFooter}>
@@ -130,7 +131,7 @@ const styles = StyleSheet.create({
   // modal footer
 
   modalFooter: {
-    borderTopWidth: 1,
+    //borderTopWidth: 1,
     borderTopColor: 'black',
     flexDirection: 'row',
     paddingTop: 10,
@@ -164,6 +165,9 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: 'black',
     textAlign: 'center',
+    borderWidth:1,
+    marginBottom:5,
+    borderColor:"#738C88"
   },
 });
 
