@@ -1,14 +1,15 @@
 import React from 'react';
-import {ActivityIndicator, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import Modal from 'react-native-modal';
 
 interface LoadingModalState {
   loading: boolean;
   open: boolean;
   name: string;
+  value: string;
 }
 interface LoadingModalProps {
-  func(emri: any): any
+  func(emri: any, vlersimi: any): any
 }
 class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
   constructor(props: LoadingModalProps) {
@@ -17,6 +18,7 @@ class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
       loading: false,
       open: false,
       name: '',
+      value: ''
     };
   }
   componentDidMount() {}
@@ -30,11 +32,15 @@ class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
   };
 
   closeModal = () => {
-    this.setState({open: false, name: ""});
+    this.setState({open: false, name: '',value:""});
   };
 
   updateName = (value: string) => {
     this.setState({name: value});
+  };
+
+  updateValue = (value: string) => {
+    this.setState({value: value});
   };
 
   render() {
@@ -48,7 +54,7 @@ class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
           <View style={styles.modalHeader}>
             <Text style={styles.modalHeaderTitle}>
               {' '}
-              {'Shkruaj emrin e lojtarit'}
+              {'Shkruaj emrin e lojtarit dhe vlersimin e tij'}
             </Text>
           </View>
           <View style={styles.modalBody}>
@@ -59,6 +65,15 @@ class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
               autoCompleteType="off"
               autoCorrect={false}
               placeholder={'Emri'}
+            />
+            <TextInput
+              style={styles.descriptionInput}
+              onChangeText={this.updateValue}
+              value={this.state.value}
+              autoCompleteType="off"
+              autoCorrect={false}
+               keyboardType = {"number-pad"}
+              placeholder={'Vlersimi'}
             />
             <View style={styles.modalFooter}>
               <TouchableOpacity
@@ -72,7 +87,7 @@ class AddModal extends React.Component<LoadingModalProps, LoadingModalState> {
 
               <TouchableOpacity
                 style={[styles.modalBtn, styles.modalBtnActive]}
-                onPress={() => this.props.func(this.state.name)}
+                onPress={() => this.props.func(this.state.name, this.state.value)}
                 disabled={this.state.loading}
                 activeOpacity={0.75}>
                 <Text style={[styles.modalBtnText, styles.modalBtnTextActive]}>
@@ -116,7 +131,7 @@ const styles = StyleSheet.create({
   // modal footer
 
   modalFooter: {
-    borderTopWidth: 1,
+    //borderTopWidth: 1,
     borderTopColor: 'black',
     flexDirection: 'row',
     paddingTop: 10,
@@ -150,6 +165,9 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: 'black',
     textAlign: 'center',
+    borderWidth:1,
+    marginBottom:5,
+    borderColor:"#738C88"
   },
 });
 
