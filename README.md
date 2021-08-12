@@ -1,4 +1,4 @@
 # VolleyPicker
-Pupcha is a simple single page application made by React. The main
-purpose is to create a new captcha that will be easy to solve by non bot
-user.
+The project consists of a simple Team picker application where you can
+add or delete members and then a randomize algorithm divide them
+between two teams. The members are stored in local storage.
